@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Age Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .calculator {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #output {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Age Calculator</h1>
+    <label for="birthYear">Enter your birth year:</label>
+    <input type="number" id="birthYear" placeholder="Enter your birth year">
+    <button onclick="calculateAge()">Calculate Age</button>
+    <p id="output"></p>
+  </div>
+
+  <script>
+    function calculateAge() {
+      const birthYear = document.getElementById('birthYear').value;
+      const currentYear = new Date().getFullYear();
+      const age = currentYear - birthYear;
+      const output = document.getElementById('output');
+      if (birthYear && !isNaN(age) && age >= 0) {
+        output.innerHTML = `Your age is: ${age}`;
+      } else {
+        output.innerHTML = 'Please enter a valid birth year.';
+      }
+    }
+  </script>
+</body>
+</html>
+
+	
+

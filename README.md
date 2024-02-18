@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Bloopie
 - 👀 I’m interested in coding
-- 🌱 I’m currently learning coders
+- 🌱 I’m currently learning coder
 - 💞️ I’m looking to collaborate on discord
 
   
